@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CSVTU App</string>
+    <string name="college_name">Chhattishgarh Swami Vivekanand Technical University, Bhilai</string>
+    <string name="todo">TODO</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="video">Videos</string>
+    <string name="Notes">Notes</string>
+    <string name="university_address">"Newai, P.O.-Newai, District- Durg (Chhattisgarh), PIN-491107  "</string>
+    <string name="Banner_Ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="btn_like">Like</string>
+    <string name="btn_dislike">Dislike</string>
+    <string name="btn_share">Share</string>
+    <string name="btn_save">Save</string>
+</resources>

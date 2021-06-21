@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.technicalrupu.csvtu">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_csvtu_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_csvtu_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Csvtu">
+        <activity
+            android:name=".VideoPlayerActivity"
+            android:configChanges="orientation|screenSize|layoutDirection" />
+        <activity android:name=".PdfViwerActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SubjectActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SubActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".HomeActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".CourseActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SplashScreen" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713"/>
+    </application>
+
+</manifest>

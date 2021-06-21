@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginVertical="2dp"
+    android:layout_marginHorizontal="5dp"
+    android:padding="10dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="B.E. 8th Semester [Backlog apr-may 2020]"
+        android:textStyle="bold|italic"
+        android:textSize="20dp"
+        android:layout_gravity="left"
+        android:textColor="#F44336"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Issued on :"
+            android:padding="2dp"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            android:textColor="@color/colorPrimaryLight"/>
+        <TextView
+            android:id="@+id/issuedon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="27/3/2020"
+            android:paddingHorizontal="5dp"
+            android:paddingVertical="2dp"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/otherinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:text="RT and RV Date: 19/11/2020"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="2dp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/white"
+        android:background="@color/colorPrimary"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/BtnShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:text="SHARE"
+            android:textStyle="bold"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/BtnViewResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Result"
+            android:textStyle="bold"
+            android:backgroundTint="@color/colorPrimaryDark"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>
