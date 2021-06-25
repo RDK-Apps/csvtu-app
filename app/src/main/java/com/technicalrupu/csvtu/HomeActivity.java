@@ -8,10 +8,15 @@ import androidx.fragment.app.Fragment;
 import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toolbar;
 
 import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.technicalrupu.csvtu.Fragment.ELibraryFragment;
 import com.technicalrupu.csvtu.Fragment.HomeFragment;
 import com.technicalrupu.csvtu.Fragment.SettingsFragment;
@@ -19,7 +24,7 @@ import com.technicalrupu.csvtu.Fragment.SubjectsFragment;
 import com.technicalrupu.csvtu.Fragment.SyllabusFragment;
 
 public class HomeActivity extends AppCompatActivity {
-
+private  InterstitialAd mInterstitialAd;
     @SuppressLint("UseSupportActionBar")
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -80,6 +85,20 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
         bottomNavigation.show(1,true);
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        InterstitialAd.load(this,getString(R.string.Interstitial_Ad_unit_id), adRequest, new InterstitialAdLoadCallback() {
+            @Override
+            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                mInterstitialAd = interstitialAd;
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                // Handle the error
+                mInterstitialAd = null;
+            }
+        });
     }
 
     private void layoutmanager(Fragment fragment) {
@@ -93,5 +112,17 @@ public class HomeActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
         return true;
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (mInterstitialAd != null) {
+            Log.d("mads", "onBackPressed: "+"not loaded");
+            mInterstitialAd.show(HomeActivity.this);
+            finish();
+        } else {
+            finish();
+        }
     }
 }

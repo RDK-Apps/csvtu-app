@@ -1,5 +1,6 @@
 package com.technicalrupu.csvtu;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -16,6 +17,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
@@ -53,9 +55,12 @@ import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.technicalrupu.csvtu.adapter.VideoResourseAdapter;
 import com.technicalrupu.csvtu.data.Api;
 import com.technicalrupu.csvtu.data.Notes;
@@ -70,6 +75,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class VideoPlayerActivity extends AppCompatActivity {
+    private InterstitialAd mInterstitialAd;
     PlayerView playerView;
     ProgressBar progressBar,progressBar2;
     ImageView btFullScreen;
@@ -243,6 +249,20 @@ public class VideoPlayerActivity extends AppCompatActivity {
        String sName=getIntent().getStringExtra("SNAME");
        expandableListView=findViewById(R.id.course_expandablelistview);
         getVideos(sName);
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        InterstitialAd.load(this,getString(R.string.Interstitial_Ad_unit_id), adRequest, new InterstitialAdLoadCallback() {
+            @Override
+            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                mInterstitialAd = interstitialAd;
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                // Handle the error
+                mInterstitialAd = null;
+            }
+        });
     }
 
 
@@ -336,5 +356,17 @@ public class VideoPlayerActivity extends AppCompatActivity {
         float density = outMetrics.density;
         int adWidth = (int) (widthPixels / density);
         return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (mInterstitialAd != null) {
+            Log.d("mads", "onBackPressed: "+"not loaded");
+            mInterstitialAd.show(VideoPlayerActivity.this);
+            finish();
+        } else {
+            finish();
+        }
     }
 }

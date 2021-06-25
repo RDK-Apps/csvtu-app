@@ -9,6 +9,7 @@ import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -25,13 +26,17 @@ import android.widget.Toast;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 
 public class PdfViwerActivity extends AppCompatActivity {
   WebView webView;
     private  AdView adView;
+    private InterstitialAd mInterstitialAd;
     FrameLayout adViewContainer;
   ProgressBar progressBar;
 
@@ -57,6 +62,20 @@ public class PdfViwerActivity extends AppCompatActivity {
         adView = new AdView(this);
         adView.setAdUnitId(getString(R.string.Banner_Ad_unit_id));
         adViewContainer.addView(adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        InterstitialAd.load(this,getString(R.string.Interstitial_Ad_unit_id), adRequest, new InterstitialAdLoadCallback() {
+            @Override
+            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                mInterstitialAd = interstitialAd;
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                // Handle the error
+                mInterstitialAd = null;
+            }
+        });
 
 
         loadPdf();
@@ -128,5 +147,18 @@ public class PdfViwerActivity extends AppCompatActivity {
         float density = outMetrics.density;
         int adWidth = (int) (widthPixels / density);
         return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (mInterstitialAd != null) {
+            Log.d("mads", "onBackPressed: "+"not loaded");
+            mInterstitialAd.show(PdfViwerActivity.this);
+            finish();
+        } else {
+            finish();
+        }
+
     }
 }

@@ -1,5 +1,6 @@
 package com.technicalrupu.csvtu;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,9 +23,12 @@ import android.widget.Toolbar;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.technicalrupu.csvtu.adapter.CourseAdapter;
 import com.technicalrupu.csvtu.adapter.SubjectAdapter;
 import com.technicalrupu.csvtu.data.Api;
@@ -39,6 +43,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class SubjectActivity extends AppCompatActivity {
+    private InterstitialAd mInterstitialAd;
     RecyclerView SubjectRecyclerview;
     String Resourse;
     ProgressBar progressBar;
@@ -105,6 +110,20 @@ public class SubjectActivity extends AppCompatActivity {
                 finish();
             }
         });
+        AdRequest adRequest = new AdRequest.Builder().build();
+
+        InterstitialAd.load(this,getString(R.string.Interstitial_Ad_unit_id), adRequest, new InterstitialAdLoadCallback() {
+            @Override
+            public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                mInterstitialAd = interstitialAd;
+            }
+
+            @Override
+            public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                // Handle the error
+                mInterstitialAd = null;
+            }
+        });
 
     }
     private void loadBanner() {
@@ -123,5 +142,17 @@ public class SubjectActivity extends AppCompatActivity {
         float density = outMetrics.density;
         int adWidth = (int) (widthPixels / density);
         return AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this, adWidth);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        if (mInterstitialAd != null) {
+            Log.d("mads", "onBackPressed: "+"not loaded");
+            mInterstitialAd.show(SubjectActivity.this);
+            finish();
+        } else {
+            finish();
+        }
     }
 }

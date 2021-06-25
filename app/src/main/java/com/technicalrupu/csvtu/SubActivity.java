@@ -87,6 +87,7 @@ public class SubActivity extends AppCompatActivity {
 
         setActionBar(toolbar);
         loadfragment(fragment);
+
     }
 
     private void loadfragment(Fragment fragmnet) {

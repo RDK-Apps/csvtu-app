@@ -7,7 +7,11 @@
     <string name="video">Videos</string>
     <string name="Notes">Notes</string>
     <string name="university_address">"Newai, P.O.-Newai, District- Durg (Chhattisgarh), PIN-491107  "</string>
-    <string name="Banner_Ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+<!--    for test ads-->
+        <string name="Banner_Ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+        <string name="Interstitial_Ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+<!--    <string name="Banner_Ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
+<!--    <string name="Interstitial_Ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>-->
     <string name="btn_like">Like</string>
     <string name="btn_dislike">Dislike</string>
     <string name="btn_share">Share</string>

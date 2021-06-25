@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -58,7 +59,7 @@ public class SubjectAdapter extends RecyclerView.Adapter<SubjectAdapter.viewHold
     }
 
     public static class  viewHolder extends RecyclerView.ViewHolder
-    {  RelativeLayout Subject_layout;
+    {  LinearLayout Subject_layout;
        ImageView subject_bg;
        TextView Subject_Name;
 
