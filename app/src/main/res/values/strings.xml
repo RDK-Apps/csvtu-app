@@ -10,8 +10,9 @@
 <!--    for test ads-->
         <string name="Banner_Ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
         <string name="Interstitial_Ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
-<!--    <string name="Banner_Ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>-->
-<!--    <string name="Interstitial_Ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>-->
+<!--    main ad unit ids-->
+<!--    <string name="Banner_Ad_unit_id">ca-app-pub-1873084368980224/8442284300</string>-->
+<!--    <string name="Interstitial_Ad_unit_id">ca-app-pub-1873084368980224/7860858047</string>-->
     <string name="btn_like">Like</string>
     <string name="btn_dislike">Dislike</string>
     <string name="btn_share">Share</string>
