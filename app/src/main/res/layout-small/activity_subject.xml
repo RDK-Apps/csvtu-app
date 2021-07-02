@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_layout"
+    tools:context=".SubjectActivity">
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:titleTextColor="@color/white"
+        android:background="@color/colorPrimaryDark"
+        tools:targetApi="lollipop" />
+    <RelativeLayout
+        android:id="@+id/progressBar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/ProgressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="2dp"
+            android:background="@drawable/round_white"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/adViewContainer"
+        android:id="@+id/subjects_recyclerview"
+        android:layout_width="match_parent"
+        android:padding="2dp"
+        app:spanCount="2"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+    <FrameLayout
+        android:id="@+id/adViewContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

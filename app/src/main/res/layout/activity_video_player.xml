@@ -51,6 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
+            android:text="Video tittle"
             android:textColor="@color/colorPrimaryDark"
             android:paddingHorizontal="10dp"
             android:textStyle="bold"
@@ -60,9 +61,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="15sp"
+            android:text="Subject Name"
             android:textColor="@color/white"
             android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="10dp"
+            android:layout_marginVertical="5dp"
             android:padding="5dp"
             android:background="@color/colorPrimaryDark"
             android:textStyle="italic|bold" />
@@ -70,15 +72,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:padding="10dp"
+            android:padding="2dp"
             android:orientation="horizontal">
             <LinearLayout
                 android:id="@+id/btn_like"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginRight="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginEnd="60dp"
                 tools:ignore="UseCompoundDrawables">
                 <ImageView
                     android:layout_width="25dp"
@@ -103,8 +105,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginRight="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginEnd="60dp"
                 tools:ignore="UseCompoundDrawables">
                 <ImageView
 
@@ -129,8 +131,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginRight="20dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginEnd="60dp"
                 tools:ignore="UseCompoundDrawables">
                 <ImageView
                     android:layout_width="25dp"
@@ -198,8 +200,8 @@
         <ProgressBar
             android:id="@+id/ProgressBar2"
             android:layout_width="80dp"
-            android:padding="5dp"
-            android:background="@drawable/round_white"
+            android:padding="2dp"
+            android:background="@color/white"
             android:layout_height="80dp"
             android:layout_centerInParent="true"/>
     </RelativeLayout>

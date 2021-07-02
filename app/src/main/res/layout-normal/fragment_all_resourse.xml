@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_layout"
+    tools:context=".Fragment.AllResourseFragment">
+    <RelativeLayout
+        android:id="@+id/progressBar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ProgressBar
+            android:id="@+id/ProgressBar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/notes_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:background="@color/white"
+        android:paddingVertical="15dp"
+        android:layout_marginVertical="1dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:srcCompat="@drawable/ic_notes"
+            app:tint="@color/colorPrimaryDark"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/todo" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:paddingLeft="15dp"
+            android:layout_weight="1"
+            android:paddingStart="15dp"
+            tools:ignore="RtlSymmetry">
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Notes"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:layout_gravity="center"
+                android:textStyle="bold|italic"
+                android:textColor="#3C6368"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_right"
+            app:tint="@color/colorPrimaryDark" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/videos_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="15dp"
+        android:background="@color/white"
+        android:layout_marginVertical="1dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/ic_video"
+            app:tint="@color/colorPrimaryDark"
+            android:contentDescription="@string/todo" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:paddingLeft="15dp"
+            android:layout_weight="1"
+            android:paddingStart="15dp"
+            tools:ignore="RtlSymmetry">
+            <TextView
+                android:id="@+id/textview3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Videos"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:layout_gravity="center"
+                android:textStyle="bold|italic"
+                android:textColor="#3C6368"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow3"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_right"
+            app:tint="@color/colorPrimaryDark"
+            android:contentDescription="@string/todo" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/pyq_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="15dp"
+        android:background="@color/white"
+        android:layout_marginVertical="1dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+
+            app:srcCompat="@drawable/ic_pyq"
+            app:tint="@color/colorPrimaryDark"
+            android:layout_gravity="center_vertical"
+            android:contentDescription="@string/todo" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:paddingLeft="15dp"
+            android:layout_weight="1"
+            android:paddingStart="15dp"
+            tools:ignore="RtlSymmetry">
+            <TextView
+                android:id="@+id/textview4"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="PYQ's"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:layout_gravity="center"
+                android:textStyle="bold|italic"
+                android:textColor="#3C6368"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow4"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_right"
+            app:tint="@color/colorPrimaryDark"
+            android:contentDescription="@string/todo" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

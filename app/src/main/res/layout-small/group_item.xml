@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingHorizontal="5dp"
+    android:paddingVertical="10dp"
+    android:orientation="horizontal"
+    android:id="@+id/group_layout">
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_school" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:layout_weight="1">
+        <TextView
+            android:id="@+id/textview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="group item"
+            android:textSize="10sp"
+            android:layout_weight="1"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:textStyle="bold|italic"
+            android:textColor="#3C6368"/>
+        <TextView
+            android:id="@+id/textview2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chhattisgarh Swami Vivekanand University"
+            android:textSize="7sp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryLight"
+            android:elevation="2dp"
+            android:paddingHorizontal="5dp"
+            android:layout_gravity="start"
+            android:textStyle="bold"
+            android:textColor="#ffff"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/ic_right"
+        app:tint="@color/colorPrimaryDark" />
+
+</LinearLayout>

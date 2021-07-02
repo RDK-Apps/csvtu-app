@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".Fragment.SettingsFragment">
+    <LinearLayout
+        android:id="@+id/change_course"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="5dp"
+        android:background="@color/white"
+        android:paddingVertical="5dp"
+        android:layout_marginVertical="1dp"
+        android:layout_marginHorizontal="5dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_school"
+            app:tint="@color/colorPrimaryDark"
+            android:contentDescription="@string/todo" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:layout_weight="1"
+            android:paddingStart="5dp"
+            tools:ignore="RtlSymmetry">
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Change Course"
+                android:textSize="12sp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:layout_gravity="center"
+                android:textStyle="bold|italic"
+                android:textColor="#3C6368"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow24"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_right"
+            app:tint="@color/colorPrimaryDark"
+            android:contentDescription="@string/todo" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Send_Feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="5dp"
+        android:background="@color/white"
+        android:paddingVertical="5dp"
+        android:layout_marginVertical="1dp"
+        android:layout_marginHorizontal="5dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_feedback"
+            app:tint="@color/colorPrimaryDark"
+            android:contentDescription="@string/todo" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:layout_weight="1"
+            android:paddingStart="5dp"
+            tools:ignore="RtlSymmetry">
+            <TextView
+                android:id="@+id/textview23"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Send Feedback"
+                android:textSize="12sp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:layout_gravity="center"
+                android:textStyle="bold|italic"
+                android:textColor="#3C6368"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow23"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_right"
+            app:tint="@color/colorPrimaryDark"
+            android:contentDescription="@string/todo" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Share_App"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="5dp"
+        android:background="@color/white"
+        android:paddingVertical="5dp"
+        android:layout_marginVertical="1dp"
+        android:layout_marginHorizontal="5dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_share"
+            app:tint="@color/colorPrimaryDark"
+            android:contentDescription="@string/todo" />
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:paddingLeft="5dp"
+            android:layout_weight="1"
+            android:paddingStart="5dp"
+            tools:ignore="RtlSymmetry">
+            <TextView
+                android:id="@+id/textview24"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="Share App"
+                android:textSize="12sp"
+                android:layout_weight="1"
+                android:padding="2dp"
+                android:layout_gravity="center"
+                android:textStyle="bold|italic"
+                android:textColor="#3C6368"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/arrow2"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_right"
+            app:tint="@color/colorPrimaryDark"
+            android:contentDescription="@string/todo" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CSVTU Contact Details"
+            android:paddingHorizontal="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:textSize="15sp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_email"
+                app:tint="@color/orange" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="enquiry@csvtu.ac.in"
+                android:paddingLeft="7dp"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:srcCompat="@drawable/ic_call"
+                app:tint="@color/orange" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="788-2445020, 788-2445036"
+                android:paddingLeft="7dp"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/logo"
+                app:tint="@color/orange" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/university_address"
+                android:paddingLeft="7dp"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Useful Links"
+            android:paddingHorizontal="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:textSize="15sp"
+            android:textColor="@color/orange"
+            android:textStyle="bold"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_website"
+                app:tint="@color/orange" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="www.csvtu.ac.in"
+                android:paddingLeft="7dp"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:textSize="10sp"
+                tools:ignore="SmallSp" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginHorizontal="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_youtube"
+                app:tint="@color/orange" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="youtube/csvtu"
+                android:paddingLeft="7dp"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:textSize="10sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
